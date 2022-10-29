@@ -1,0 +1,24 @@
+package com.masai;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope
+public class A {
+	
+	@Autowired(required = false)
+	@Qualifier(value = "b5")
+	private B b1;
+
+	
+	public void funA() {
+
+	
+	System.out.println("iside funA of A class");
+	System.out.println(b1);
+//	b1.funB();
+}
+}

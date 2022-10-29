@@ -1,0 +1,11 @@
+package com.masai;
+
+public class A {
+	
+public void funA() {
+	private B b1;
+	
+	System.out.println("iside funA of A class");
+	System.out.println(b1);
+}
+}

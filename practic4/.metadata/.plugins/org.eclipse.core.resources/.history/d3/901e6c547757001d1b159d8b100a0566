@@ -1,0 +1,38 @@
+package com.masai;
+
+import java.util.List;
+
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+@Component
+public class A {
+	@Autowired
+	private B b1;
+	
+	@Autowired
+	@Qualifier(value = "getList")
+	private List<String> city;
+	
+
+	public void funA() {
+		System.out.println("inside funB of b class");
+	   System.out.println(b1);
+	}
+	
+	@PostConstruct
+	public void Show() {
+		System.out.println("hello hi are you");
+	}
+	
+	@PreDestroy
+	public void Destroy() {
+		System.out.println("destroyee method start call");
+		System.out.println(city);
+	}
+
+}

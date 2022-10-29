@@ -1,0 +1,12 @@
+package com.masai;
+
+public class A {
+	private B b1;
+	
+	
+	public void funB() {
+		System.out.println("inside funB of b class");
+	   System.out.println(b1);
+	}
+
+}
